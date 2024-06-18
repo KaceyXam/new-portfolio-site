@@ -1,0 +1,33 @@
+:root {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0A091F;
+  color: white;
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+/* end css reset */

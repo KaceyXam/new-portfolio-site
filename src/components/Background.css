@@ -1,0 +1,19 @@
+.background {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
+.mouse-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #9692e644;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 999vh;
+  z-index: -999999;
+  filter: blur(999px);
+}
