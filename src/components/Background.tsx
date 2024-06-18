@@ -6,22 +6,25 @@ export default function Background() {
 
   const [pos, setPos] = createSignal({ x: 0, y: 0 });
   function handle_mouse(event: any) {
-    setPos({
-      x: event.clientX,
-      y: event.clientY,
-    });
-
     mouseBlob.animate(
       {
         left: `${event.clientX}px`,
         top: `${event.clientY}px`,
       },
-      { duration: 300, fill: "forwards" }
+      { duration: 700, fill: "forwards" }
     );
   }
 
+  onMount(() => {
+    window.addEventListener("mousemove", handle_mouse);
+  });
+
+  onCleanup(() => {
+    window.removeEventListener("mousemove", handle_mouse);
+  });
+
   return (
-    <section onMouseMove={handle_mouse} class="background">
+    <section class="background">
       <div class="mouse-circle" ref={mouseBlob}></div>
     </section>
   );
